@@ -1,16 +1,18 @@
 import React from 'react';
+import logo1 from '../assets/logo1.png'
+import logo2 from '../assets/logo2.png'
+import logo3 from '../assets/logo3.png'
+import logo4 from '../assets/logo4.png'
 
 const Universities = () => {
-  // University logos - in a real app, these would be actual image files
   const universities = [
-    { name: 'Delhi University', logo: 'DU' },
-    { name: 'IIT Bombay', logo: 'IITB' },
-    { name: 'IIM Ahmedabad', logo: 'IIMA' },
-    { name: 'BITS Pilani', logo: 'BITS' },
-    { name: 'Jadavpur University', logo: 'JU' },
-    { name: 'University of Mumbai', logo: 'MU' },
-    { name: 'Anna University', logo: 'AU' },
-    { name: 'Manipal University', logo: 'MAHE' },
+    { name: 'Delhi University', logo: logo1 },
+    { name: 'IIT Bombay', logo: logo2 },
+    { name: 'IIM Ahmedabad', logo: logo3 },
+    { name: 'BITS Pilani', logo: logo4 },
+    { name: 'Delhi University', logo: logo1 },
+    { name: 'IIT Bombay', logo: logo2 },
+   
   ];
 
   return (
@@ -24,14 +26,15 @@ const Universities = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 max-w-4xl mx-auto">
           {universities.map((uni, index) => (
             <div key={index} className="flex items-center justify-center">
-              <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300">
-                {/* In a real app, this would be an image tag */}
-                <div className="text-4xl font-bold text-gray-800 border-2 border-gray-300 w-full h-full flex items-center justify-center">
-                  {uni.logo}
-                </div>
+              <div className="w-32 h-32 flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300">
+                <img 
+                  src={uni.logo} 
+                  alt={`${uni.name} logo`}
+                  className="max-w-full max-h-full object-contain"
+                />
               </div>
             </div>
           ))}
