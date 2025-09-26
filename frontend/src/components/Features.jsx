@@ -1,137 +1,106 @@
-import React, { useEffect, useRef } from 'react';
-import { FaMicrophone, FaClipboardCheck, FaRobot, FaGlobe } from 'react-icons/fa';
+import React from 'react';
+import { FaMicrophone, FaClipboardCheck, FaRobot, FaGlobe, FaPen, FaBook } from 'react-icons/fa';
 
 const Features = () => {
   const features = [
     {
       icon: <FaMicrophone className="text-4xl text-[#0947ba]" />,
-      title: "Speaking Practice",
-      description: "Practice with native speakers and receive detailed feedback on pronunciation, fluency, and coherence."
+      title: "AI-Powered Speaking Practice",
+      description: "Practice with native speakers and receive real-time feedback on pronunciation, fluency, and coherence using advanced AI technology.",
+      gradient: "from-blue-500 to-purple-600"
     },
     {
       icon: <FaClipboardCheck className="text-4xl text-[#0947ba]" />,
-      title: "Mock Tests",
-      description: "Take full-length practice tests under exam conditions and get comprehensive analysis of your performance."
+      title: "Comprehensive Mock Tests",
+      description: "Take full-length practice tests under real exam conditions and get detailed performance analysis with improvement suggestions.",
+      gradient: "from-green-500 to-teal-600"
     },
     {
       icon: <FaRobot className="text-4xl text-[#0947ba]" />,
-      title: "AI Band Score Prediction",
-      description: "Our AI technology analyzes your responses and predicts your band score with high accuracy."
+      title: "Smart Band Score Prediction",
+      description: "Our advanced AI analyzes your responses and predicts your exact band score with 95% accuracy, helping you track progress.",
+      gradient: "from-purple-500 to-pink-600"
     },
     {
       icon: <FaGlobe className="text-4xl text-[#0947ba]" />,
-      title: "Global Recognition",
-      description: "Our certificates and preparation methods are recognized by universities worldwide."
+      title: "Global University Recognition",
+      description: "Our certificates and preparation methods are recognized by top universities and institutions worldwide.",
+      gradient: "from-orange-500 to-red-600"
     },
     {
-      icon: <FaMicrophone className="text-4xl text-[#0947ba]" />,
-      title: "Writing Evaluation",
-      description: "Get detailed feedback on your writing tasks with suggestions for improvement and error correction."
+      icon: <FaPen className="text-4xl text-[#0947ba]" />,
+      title: "Expert Writing Evaluation",
+      description: "Get detailed feedback on Task 1 & 2 with personalized suggestions, grammar corrections, and vocabulary enhancement tips.",
+      gradient: "from-cyan-500 to-blue-600"
     },
     {
-      icon: <FaClipboardCheck className="text-4xl text-[#0947ba]" />,
-      title: "Reading Strategies",
-      description: "Learn effective strategies to tackle different question types in the reading section."
+      icon: <FaBook className="text-4xl text-[#0947ba]" />,
+      title: "Advanced Reading Strategies",
+      description: "Master proven techniques to tackle all question types efficiently, improving speed and accuracy in the reading section.",
+      gradient: "from-indigo-500 to-purple-600"
     }
   ];
 
-  const sectionRef = useRef(null);
-  const leftSideRef = useRef(null);
-  const rightSideRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Only apply the effect on desktop screens
-      if (window.innerWidth < 768) return;
-      
-      if (!sectionRef.current || !leftSideRef.current || !rightSideRef.current) return;
-      
-      const sectionTop = sectionRef.current.getBoundingClientRect().top;
-      const sectionHeight = sectionRef.current.offsetHeight;
-      const viewportHeight = window.innerHeight;
-      
-      // Calculate how far we've scrolled into the section
-      const scrollProgress = (viewportHeight - sectionTop) / (sectionHeight + viewportHeight);
-      
-      // Clamp the value between 0 and 1
-      const clampedProgress = Math.max(0, Math.min(1, scrollProgress));
-      
-      // Apply the sticky effect to the left side
-      leftSideRef.current.style.position = 'sticky';
-      leftSideRef.current.style.top = '100px';
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <section ref={sectionRef} className="bg-gray-50 py-16 md:py-24">
+    <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Why Choose IELTS Pro</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Our comprehensive approach to IELTS preparation ensures you develop the skills needed to achieve your target score.
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+            Features That Make
+            <span className="bg-gradient-to-r from-[#0947ba] to-[#3a6fd1] bg-clip-text text-transparent"> Difference</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover how our innovative approach, cutting-edge technology, and expert guidance 
+            transform your IELTS preparation journey into a success story.
           </p>
         </div>
-        
-        {/* Mobile view - regular grid */}
-        <div className="md:hidden grid grid-cols-1 gap-8">
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
+            <div
+              key={index}
+              className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-700 transform"
             >
-              <div className="mb-4">
-                {feature.icon}
+              {/* Gradient Background */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-3xl`}></div>
+              
+              {/* Icon Container */}
+              <div className="relative mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#0947ba]/10 to-[#3a6fd1]/10 rounded-2xl ">
+                  {feature.icon}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+
+              {/* Content */}
+              <div className="relative">
+                <h3 className="text-xl font-bold mb-4 text-gray-800 group-hover:text-[#0947ba] transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                  {feature.description}
+                </p>
+
+ 
+              </div>
+
+              {/* Border Glow Effect */}
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-[#0947ba]/20 transition-colors duration-300"></div>
             </div>
           ))}
         </div>
-        
-        {/* Desktop view - scrolling effect */}
-        <div className="hidden md:flex">
-          {/* Left side - static content */}
-          <div ref={leftSideRef} className="w-1/2 pr-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-[#0947ba] mb-4">Comprehensive IELTS Preparation</h3>
-              <p className="text-gray-700 mb-6">
-                Our platform offers everything you need to excel in your IELTS exam. With expert guidance, 
-                personalized feedback, and cutting-edge technology, we ensure you're fully prepared for success.
-              </p>
-              <div className="bg-[#0947ba] text-white p-4 rounded-lg">
-                <p className="font-medium">Our students achieve:</p>
-                <ul className="mt-2 list-disc pl-5">
-                  <li>Average score improvement of 1.5 bands</li>
-                  <li>95% success rate for university admissions</li>
-                  <li>Confidence in all four test sections</li>
-                </ul>
-              </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white p-6 rounded-2xl shadow-lg">
+            <div className="text-left">
+              <h4 className="font-bold text-gray-800 mb-1">Ready to experience the difference?</h4>
+              <p className="text-gray-600 text-sm">Join 15,000+ successful IELTS students</p>
             </div>
-          </div>
-          
-          {/* Right side - scrolling content */}
-          <div ref={rightSideRef} className="w-1/2 space-y-6 pl-4">
-            {features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-start"
-              >
-                <div className="mr-4 mt-1">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              </div>
-            ))}
+            <button className="bg-gradient-to-r from-[#0947ba] to-[#3a6fd1] text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              Start Free Trial
+            </button>
           </div>
         </div>
       </div>
