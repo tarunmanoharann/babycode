@@ -61,20 +61,7 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Score Animation */}
-            <div className="flex items-center gap-6 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-yellow-400 transition-all duration-500">
-                  {currentScore}
-                </div>
-                <div className="text-sm text-blue-100">Target Band</div>
-              </div>
-              <div className="h-12 w-px bg-white/30"></div>
-              <div>
-                <div className="text-sm text-blue-100 mb-1">Next Intake</div>
-                <div className="font-semibold">January 15, 2025</div>
-              </div>
-            </div>
+
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
