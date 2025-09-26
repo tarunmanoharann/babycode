@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaBars, FaTimes, FaGlobe, FaChevronDown } from 'react-icons/fa';
+import iconimg from '../assets/icon.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
           <img 
-            src="../assets/icon.png" 
+            src={iconimg} 
             alt="IELTS Pro Logo" 
             className="h-10 w-10 object-contain"
           />
