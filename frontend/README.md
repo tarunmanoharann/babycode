@@ -1,16 +1,70 @@
-# React + Vite
+# IELTS Pro - Modern IELTS Institute Homepage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive homepage for a fictional IELTS preparation institute built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+![IELTS Pro Homepage](https://github.com/yourusername/babycode/blob/main/frontend/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Modern UI Design**: Clean, professional interface with a color scheme based on #0947ba
+- **Fully Responsive**: Works seamlessly on mobile, tablet, and desktop devices
+- **Component-Based Architecture**: Modular React components for easy maintenance
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Sections
 
-## Expanding the ESLint configuration
+1. **Navbar**: Logo and responsive navigation menu
+2. **Hero Section**: Engaging headline, call-to-action buttons, and lead capture form
+3. **Features**: 4 key service offerings with icons and descriptions
+4. **Testimonials**: Student success stories with ratings
+5. **Footer**: Contact information, quick links, and social media
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup Instructions
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/babycode.git
+   cd babycode/frontend
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:5173
+   ```
+
+## Design Choices
+
+- **Color Palette**: Based on the primary color #0947ba with complementary shades for a professional, trustworthy appearance
+- **Typography**: Used Inter font family for clean readability across devices
+- **Card-Based Layout**: Organized information in card components for visual separation and focus
+- **Form Integration**: Added lead capture form in the hero section for immediate user engagement
+- **Responsive Design**: Mobile-first approach with tailored layouts for different screen sizes
+- **Iconography**: Used React Icons for consistent visual elements that enhance the user experience
+
+## Technologies Used
+
+- React 19
+- Tailwind CSS 4
+- React Icons
+- Vite
+
+## Future Enhancements
+
+- Add authentication for student login
+- Implement course booking functionality
+- Create blog section for IELTS tips and resources
+- Add dark mode toggle
+
+## License
+
+MIT
