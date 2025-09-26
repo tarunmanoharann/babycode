@@ -44,7 +44,6 @@ const Features = () => {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
             Features That Make
@@ -56,24 +55,23 @@ const Features = () => {
           </p>
         </div>
 
-        {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {features.map((feature, index) => (
             <div
               key={index}
               className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-700 transform"
             >
-              {/* Gradient Background */}
+            
               <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-3xl`}></div>
               
-              {/* Icon Container */}
+             
               <div className="relative mb-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#0947ba]/10 to-[#3a6fd1]/10 rounded-2xl ">
                   {feature.icon}
                 </div>
               </div>
 
-              {/* Content */}
+           
               <div className="relative">
                 <h3 className="text-xl font-bold mb-4 text-gray-800 group-hover:text-[#0947ba] transition-colors duration-300">
                   {feature.title}
@@ -85,13 +83,13 @@ const Features = () => {
  
               </div>
 
-              {/* Border Glow Effect */}
+       
               <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-[#0947ba]/20 transition-colors duration-300"></div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
+ 
         <div className="text-center mt-16">
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white p-6 rounded-2xl shadow-lg">
             <div className="text-left">

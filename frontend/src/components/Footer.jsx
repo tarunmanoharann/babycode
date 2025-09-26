@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+     
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -40,7 +40,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Courses */}
+   
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Courses</h4>
             <ul className="space-y-2">
@@ -52,7 +52,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+     
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-3">

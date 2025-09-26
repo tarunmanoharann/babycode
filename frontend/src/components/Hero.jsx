@@ -4,7 +4,6 @@ import { FaStar, FaPlay, FaUsers, FaTrophy, FaGraduationCap } from 'react-icons/
 const Hero = () => {
   const [currentScore, setCurrentScore] = useState(6.5);
 
-  // Animated counter effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentScore(prev => {
@@ -25,7 +24,6 @@ const Hero = () => {
 
   return (
     <section className="relative bg-gradient-to-br from-[#0947ba] via-[#1e5cbf] to-[#3a6fd1] text-white overflow-hidden min-h-screen flex items-center">
-      {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-300 rounded-full blur-3xl"></div>
@@ -35,9 +33,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
-          {/* Left Content */}
+    
           <div className="space-y-8">
-            {/* Badge */}
+  
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (
@@ -47,7 +45,7 @@ const Hero = () => {
               <span className="text-sm font-medium">Rated #1 IELTS Institute</span>
             </div>
 
-            {/* Main Heading */}
+           
             <div>
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
                 Master IELTS,
@@ -61,9 +59,6 @@ const Hero = () => {
               </p>
             </div>
 
-
-
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="group cursor-pointer bg-white text-[#0947ba] hover:bg-gray-50 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1">
                 Start Free Trial
@@ -76,7 +71,7 @@ const Hero = () => {
               </button>
             </div>
 
-            {/* Stats */}
+       
             <div className="grid grid-cols-3 gap-6 pt-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center group">
@@ -90,10 +85,10 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Interactive Card */}
+         
           <div className="lg:pl-8">
             <div className="relative">
-              {/* Main Card */}
+          
               <div className="bg-white rounded-3xl p-8 shadow-xl  duration-300">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#0947ba] to-[#3a6fd1] rounded-2xl mb-4">
@@ -107,7 +102,7 @@ const Hero = () => {
                   </p>
                 </div>
 
-                {/* Interactive Elements */}
+            
                 <div className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border-2 border-transparent hover:border-[#0947ba] cursor-pointer transition-all">
@@ -120,7 +115,7 @@ const Hero = () => {
                     </div>
                   </div>
 
-                  {/* Progress Indicators */}
+                 
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-medium text-gray-700">Reading</span>
@@ -145,7 +140,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Floating Elements */}
+          
               <div className="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-pulse">
                 Limited Spots!
               </div>

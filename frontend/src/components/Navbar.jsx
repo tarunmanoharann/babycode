@@ -86,7 +86,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
+        
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -94,7 +94,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white py-4 px-4 shadow-lg border-t border-gray-100">
           <div className="flex flex-col space-y-4">
@@ -104,7 +103,7 @@ const Navbar = () => {
             <a href="#" className="text-gray-800 hover:text-[#0947ba] font-medium transition-colors duration-200 py-2">About Us</a>
             <a href="#" className="text-gray-800 hover:text-[#0947ba] font-medium transition-colors duration-200 py-2">Contact</a>
             
-            {/* Mobile Language Selector */}
+            
             <div className="pt-2 border-t border-gray-200">
               <button 
                 onClick={toggleLangMenu}

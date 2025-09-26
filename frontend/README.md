@@ -2,8 +2,6 @@
 
 A modern, responsive homepage for a fictional IELTS preparation institute built with React and Tailwind CSS.
 
-![IELTS Pro Homepage](https://github.com/yourusername/babycode/blob/main/frontend/screenshot.png)
-
 ## Features
 
 - **Modern UI Design**: Clean, professional interface with a color scheme based on #0947ba
@@ -65,6 +63,3 @@ A modern, responsive homepage for a fictional IELTS preparation institute built 
 - Create blog section for IELTS tips and resources
 - Add dark mode toggle
 
-## License
-
-MIT
