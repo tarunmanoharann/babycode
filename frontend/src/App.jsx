@@ -7,6 +7,10 @@ import Hero from './components/Hero'
 import Features from './components/Features'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
+import Chatbot from './components/Chatbot'
+import Universities from './components/Universities'
+import Comparison from './components/Comparison'
+import MobileApp from './components/MobileApp'
 import './App.css'
 
 function App() {
@@ -15,8 +19,12 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <Universities />
+      <Comparison />
       <Testimonials />
+      <MobileApp />
       <Footer />
+      <Chatbot />
     </div>
   )
 }

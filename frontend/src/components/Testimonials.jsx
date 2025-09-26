@@ -4,25 +4,28 @@ import { FaStar } from 'react-icons/fa';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Arjun Patel",
       score: "Band 8.0",
-      image: "https://randomuser.me/api/portraits/women/32.jpg",
-      text: "IELTS Pro helped me achieve my dream score. The personalized feedback on my writing tasks was invaluable. I improved from Band 6.5 to 8.0 in just 2 months!",
-      stars: 5
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      text: "IELTS Pro helped me secure admission to the University of Melbourne. Their personalized feedback on writing tasks was invaluable. I improved from Band 6.5 to 8.0 in just 2 months!",
+      stars: 5,
+      university: "University of Melbourne"
     },
     {
-      name: "Michael Chen",
+      name: "Ananya Reddy",
       score: "Band 7.5",
-      image: "https://randomuser.me/api/portraits/men/44.jpg",
-      text: "The speaking practice sessions with native speakers boosted my confidence tremendously. The mock tests were very similar to the actual exam. Highly recommended!",
-      stars: 5
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      text: "The speaking practice sessions with native speakers boosted my confidence tremendously. I cleared my visa interview in the first attempt. The mock tests were very similar to the actual exam!",
+      stars: 5,
+      university: "University of Toronto"
     },
     {
-      name: "Priya Sharma",
+      name: "Vikram Malhotra",
       score: "Band 7.0",
-      image: "https://randomuser.me/api/portraits/women/65.jpg",
-      text: "The AI-powered feedback system helped me identify my weak areas quickly. The instructors were always available to answer my questions. Great experience overall!",
-      stars: 4
+      image: "https://randomuser.me/api/portraits/men/65.jpg",
+      text: "The AI-powered feedback system helped me identify my weak areas quickly. I got admission to my dream university with scholarship. Great experience overall!",
+      stars: 5,
+      university: "University of Sydney"
     }
   ];
 
@@ -51,6 +54,7 @@ const Testimonials = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">{testimonial.name}</h3>
                   <p className="text-[#0947ba] font-medium">{testimonial.score}</p>
+                  <p className="text-gray-500 text-sm">Alumni of {testimonial.university}</p>
                 </div>
               </div>
               <div className="flex mb-4">
