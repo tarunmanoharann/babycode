@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaCheck, FaTimes, FaStar, FaApple, FaGooglePlay, FaQrcode, FaTrophy, FaQuoteLeft, FaMobile, FaDownload } from 'react-icons/fa';
 
-// Comparison Component
 const Comparison = () => {
   const [visibleRows, setVisibleRows] = useState([]);
   const rowsRef = useRef([]);
@@ -58,7 +57,7 @@ const Comparison = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          {/* Header */}
+      
           <div className="grid grid-cols-3 mb-2">
             <div className="p-6 font-bold text-gray-700 text-lg">Features</div>
             <div className="p-6 text-center">
@@ -73,7 +72,7 @@ const Comparison = () => {
             </div>
           </div>
 
-          {/* Feature Rows */}
+     
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
             {features.map((feature, index) => (
               <div
@@ -131,7 +130,6 @@ const Comparison = () => {
   );
 };
 
-// Testimonials Component
 const Testimonials = () => {
   const [visibleCards, setVisibleCards] = useState([]);
   const cardsRef = useRef([]);
@@ -226,14 +224,12 @@ const Testimonials = () => {
                 transitionDelay: visibleCards.includes(index) ? `${index * 200}ms` : '0ms'
               }}
             >
-              {/* Quote Icon */}
               <div className="absolute -top-4 left-8">
                 <div className="bg-gradient-to-r from-[#0947ba] to-[#3a6fd1] p-3 rounded-full">
                   <FaQuoteLeft className="text-white text-lg" />
                 </div>
               </div>
 
-              {/* Header */}
               <div className="flex items-center mb-6 mt-4">
                 <div className="relative">
                   <img 
@@ -256,19 +252,19 @@ const Testimonials = () => {
                 </div>
               </div>
 
-              {/* Stars */}
+      
               <div className="flex mb-4">
                 {[...Array(testimonial.stars)].map((_, i) => (
                   <FaStar key={i} className="text-yellow-400 text-lg" />
                 ))}
               </div>
 
-              {/* Testimonial Text */}
+              
               <p className="text-gray-600 leading-relaxed mb-6 italic">
                 "{testimonial.text}"
               </p>
 
-              {/* University Info */}
+         
               <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">{testimonial.flag}</span>
@@ -294,7 +290,7 @@ const Testimonials = () => {
   );
 };
 
-// Mobile App Component
+
 const MobileApp = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -322,12 +318,8 @@ const MobileApp = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             
-            {/* Left Content */}
+     
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-              <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6">
-                <FaMobile className="text-white" />
-                <span className="text-white font-semibold text-sm">Mobile Learning</span>
-              </div>
               
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Practice IELTS
@@ -342,7 +334,7 @@ const MobileApp = () => {
                 Practice speaking with AI, take mock tests, and track your progress seamlessly.
               </p>
               
-              {/* App Store Buttons */}
+           
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <a href="#" className="group flex items-center justify-center bg-black hover:bg-gray-800 px-6 py-4 rounded-2xl transition-all duration-300 hover:scale-105 shadow-lg">
                   <FaApple className="mr-3 text-2xl" />
@@ -361,7 +353,7 @@ const MobileApp = () => {
                 </a>
               </div>
               
-              {/* Features */}
+           
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { icon: "🎯", title: "AI-Powered Practice", desc: "Smart feedback system" },
@@ -380,10 +372,9 @@ const MobileApp = () => {
               </div>
             </div>
             
-            {/* Right Content - App Preview */}
+
             <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
               <div className="relative">
-                {/* Phone Mockup */}
                 <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
                   <div className="text-center mb-8">
                     <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl mb-4">
@@ -393,12 +384,11 @@ const MobileApp = () => {
                     <p className="text-blue-100">Scan QR code or click download buttons</p>
                   </div>
 
-                  {/* QR Code */}
+   
                   <div className="bg-white p-6 rounded-2xl mb-6 flex items-center justify-center">
                     <FaQrcode size={120} className="text-[#0947ba]" />
                   </div>
 
-                  {/* App Stats */}
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
                       <div className="text-2xl font-bold text-white">4.9★</div>
@@ -415,7 +405,7 @@ const MobileApp = () => {
                   </div>
                 </div>
 
-                {/* Floating Elements */}
+
                 <div className="absolute -top-6 -left-6 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-pulse">
                   Free Download!
                 </div>
@@ -432,7 +422,7 @@ const MobileApp = () => {
   );
 };
 
-// Export all components
+
 const AnimatedSections = () => {
   return (
     <>
