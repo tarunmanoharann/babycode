@@ -19,7 +19,7 @@ const Universities = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Trusted By Top Universities</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Trusted By Top Universities Students</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Our alumni have been accepted into prestigious universities worldwide. 
             We're proud to have helped thousands of students achieve their academic dreams.
